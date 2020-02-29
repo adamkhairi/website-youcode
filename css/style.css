@@ -1,0 +1,484 @@
+* {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+}
+body #container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body .logo_nav {
+  position: relative;
+  right: 200px;
+  cursor: pointer;
+}
+body .nav_nav li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+}
+body .nav_nav li a {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+}
+body .button_nav {
+  background-color: black;
+  border-radius: 6px;
+  padding: 5px 15px;
+}
+body .button_nav a {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+body #header {
+  display: grid;
+  grid-template-columns: 50% auto;
+}
+body .content_header {
+  font-size: 25px;
+  margin-left: 200px;
+}
+body .content_header h1 {
+  font-size: 50px;
+  opacity: 0.7;
+}
+body .content_header a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 35px;
+  border-radius: 8px;
+  background-image: linear-gradient(to right, #5555a5, #5165b2, #3ea3c5, #3da6c6);
+  position: relative;
+  top: 30px;
+}
+body p {
+  opacity: 0.7;
+}
+body .vidd {
+  z-index: 1;
+}
+body .vidd .vid_header {
+  background-image: linear-gradient(140deg, #4c6d7de0, #5a576fbb);
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+}
+body .vidd .vid_header video {
+  height: 550px;
+  float: right;
+  z-index: -1;
+  position: absolute;
+}
+body .vidd .vid_header p {
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 340px;
+  right: 140px;
+}
+body input {
+  visibility: hidden;
+}
+body #nav:checked + .nav-btn i:nth-child(1) {
+  transform: translateY(6px) rotate(180deg);
+}
+body #nav:checked + .nav-btn i:nth-child(3) {
+  transform: translateY(-6px) rotate(90deg);
+}
+body #nav:checked ~ .nav_nav {
+  z-index: 1;
+  opacity: 1;
+}
+@media screen and (max-width: 900px) {
+  body .nav_nav {
+    position: fixed;
+    top: 60px;
+    width: 80%;
+    height: 30%;
+    opacity: 0;
+    background-color: black;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 10px 10px 30px black;
+  }
+  body .nav_nav ul li a {
+    margin-left: 30px;
+    color: #fcfafa;
+    line-height: 35px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  body .nav_nav ul li a:hover {
+    color: #036aaf;
+    background-color: #3da6c6;
+    z-index: 1;
+    border-radius: 5px;
+  }
+  body .nav-btn {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    z-index: 1;
+  }
+  body .nav-btn i {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #262626;
+    border-radius: 2px;
+    margin-left: 14px;
+  }
+  body .nav-btn i:nth-child(1), body .nav-btn i:nth-child(2), body .nav-btn i:nth-child(3) {
+    margin-top: 4px;
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 900px) {
+  body #container {
+    display: flex;
+    flex-direction: column;
+  }
+  body #container .logo_nav {
+    right: 100px;
+  }
+  body .button_nav {
+    visibility: hidden;
+  }
+  body #header {
+    display: flex;
+    flex-direction: column;
+  }
+  body .vidd {
+    width: 100%;
+    z-index: -1;
+  }
+  body .vidd .vid_header {
+    background-image: none;
+  }
+  body .vidd .vid_header video {
+    width: 100%;
+  }
+  body .content_header {
+    margin-left: 20px;
+  }
+  body .content_header h1 {
+    font-size: 30px;
+  }
+  body .content_header p {
+    font-size: 25px;
+  }
+  body .content_header a {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+body .titre {
+  font-family: "Nunito Sans", sans-serif;
+  text-align: center;
+  font-size: 45px;
+  color: #3f3f3fef;
+  margin-bottom: 2px;
+}
+body .-titre {
+  font-family: "Nunito Sans", sans-serif;
+  text-align: center;
+  font-size: 22px;
+  color: #5067b3;
+  margin-top: 4px;
+}
+body div.gallery {
+  margin: 20px;
+  width: 245px;
+}
+body .cp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0% 10% 0% 10%;
+  flex-wrap: wrap;
+  text-align: center;
+}
+body .desc {
+  margin-top: 10px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #3f3f3fef;
+}
+body .ret {
+  font-size: 18px;
+  font-weight: lighter;
+  color: #464545d0;
+}
+body .servises {
+  margin-top: -35px;
+  padding: 6px;
+  background-color: #f2f4f7;
+}
+body .servises .h4 {
+  font-size: 30px;
+  justify-content: center;
+  text-align: center;
+}
+body .servises .sect {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+body .servises .sect .part1 {
+  padding: 20px 120px;
+}
+body .servises .sect span {
+  color: #220ddd;
+}
+body .servises .img {
+  display: flex;
+  margin: 40px;
+}
+body .servises p {
+  max-width: 500px;
+  padding: 20px 0 30px 0;
+}
+body .servises strong {
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+body .equipe {
+  background-color: #e8eaef;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+  grid-template-rows: auto auto auto;
+}
+@media (max-width: 700px) {
+  body .equipe {
+    display: block;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+}
+body .equipe .equipe_title {
+  grid-column: 2/6;
+  grid-row: 1/2;
+  text-align: center;
+  margin: 10px;
+  margin-bottom: 50px;
+  font-size: 36px;
+}
+body .equipe .mbr_1 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background: url(../img/1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-align: center;
+  color: white;
+  height: 840px;
+  width: 100%;
+}
+body .equipe .mbr_1 button {
+  border: none;
+  color: white;
+  background-color: transparent;
+  grid-row: 2/3;
+}
+body .equipe .mbr_1 button h1 {
+  text-align: center;
+  margin: 5px auto;
+  padding: 10px 40px;
+  background-color: #3d3d3f;
+  border-radius: 100px;
+  width: 100px;
+}
+body .equipe .mbr_1 h2 {
+  margin-top: 400px;
+}
+body .equipe .mbr_2 {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  background: url(../img/2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-align: center;
+  color: white;
+  height: 840px;
+  width: 100%;
+}
+body .equipe .mbr_2 button {
+  border: none;
+  color: white;
+  background-color: transparent;
+  grid-row: 2/3;
+}
+body .equipe .mbr_2 button h1 {
+  text-align: center;
+  margin: 5px auto;
+  padding: 10px 40px;
+  background-color: #3d3d3f;
+  border-radius: 100px;
+  width: 100px;
+}
+body .equipe .mbr_2 h2 {
+  margin-top: 400px;
+}
+body .equipe .mbr_2 button h1 {
+  background-color: #35c2cd;
+}
+body .equipe .mbr_3 {
+  grid-column: 4/5;
+  grid-row: 2/3;
+  background: url(../img/3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-align: center;
+  color: white;
+  height: 840px;
+  width: 100%;
+}
+body .equipe .mbr_3 button {
+  border: none;
+  color: white;
+  background-color: transparent;
+  grid-row: 2/3;
+}
+body .equipe .mbr_3 button h1 {
+  text-align: center;
+  margin: 5px auto;
+  padding: 10px 40px;
+  background-color: #3d3d3f;
+  border-radius: 100px;
+  width: 100px;
+}
+body .equipe .mbr_3 h2 {
+  margin-top: 400px;
+}
+body .equipe .mbr_4 {
+  grid-column: 5/6;
+  grid-row: 2/3;
+  background: url(../img/4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-align: center;
+  color: white;
+  height: 840px;
+  width: 100%;
+}
+body .equipe .mbr_4 button {
+  border: none;
+  color: white;
+  background-color: transparent;
+  grid-row: 2/3;
+}
+body .equipe .mbr_4 button h1 {
+  text-align: center;
+  margin: 5px auto;
+  padding: 10px 40px;
+  background-color: #3d3d3f;
+  border-radius: 100px;
+  width: 100px;
+}
+body .equipe .mbr_4 h2 {
+  margin-top: 400px;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+footer {
+  background-image: url(../img/footer-image.png);
+  background-repeat: no-repeat;
+  background-size: 100% 1000px;
+  margin-top: -99px;
+  z-index: 10;
+}
+footer .sas {
+  background-color: rgba(63, 84, 156, 0.7);
+  background-size: 100%;
+  color: white;
+}
+footer .sas .div1 {
+  text-align: center;
+}
+footer .sas .div1 h1 {
+  font-size: 45px;
+}
+footer .sas .div1 h3 {
+  font-size: 26px;
+}
+footer .sas .div1 p {
+  font-size: 17px;
+}
+footer .sas .botonat {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+footer .sas .botonat .btn1 {
+  text-align: center;
+}
+footer .sas .botonat .btn1 button {
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 40px;
+  padding-left: 40px;
+  color: black;
+}
+footer .sas .botonat .btn2 {
+  text-align: center;
+}
+footer .sas .botonat .btn2 button {
+  background-color: #5cdce6;
+  border: none;
+  border-radius: 8px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 40px;
+  padding-left: 40px;
+  color: white;
+}
+footer .sas .sec2, footer .sas .sec1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+footer .sas .sec1 .visitez-ns {
+  margin-right: 109px;
+}
+footer .sas .sec1 .socialmedia {
+  margin-top: 52px;
+}
+footer .sas .sec2 .Links {
+  margin-top: 19px;
+}
+footer .sas .sec2 .Links a {
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

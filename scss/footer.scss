@@ -1,0 +1,101 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+@mixin btn($b-color, $color) {
+  background-color: $b-color;
+  border: none;
+  border-radius: 8px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 40px;
+  padding-left: 40px;
+  color: $color;
+}
+
+footer {
+  background-image: url(../img/footer-image.png);
+  background-repeat: no-repeat;
+  background-size: 100% 1000px;
+  margin-top: -99px;
+  z-index: 10;
+
+  .sas {
+    background-color: rgba($color: #3f549c, $alpha: 0.7);
+    background-size: 100%;
+    color: white;
+
+    .div1 {
+      text-align: center;
+
+      h1 {
+        font-size: 45px;
+      }
+
+      h3 {
+        font-size: 26px;
+      }
+
+      p {
+        font-size: 17px;
+      }
+    }
+
+    .botonat {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .btn1 {
+        text-align: center;
+
+        button {
+          @include btn(white, black);
+        }
+      }
+
+      .btn2 {
+        text-align: center;
+
+        button {
+          @include btn(#5cdce6, white);
+        }
+      }
+    }
+
+    %sec {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .sec1 {
+      @extend %sec;
+
+      .visitez-ns {
+        margin-right: 109px;
+      }
+
+      .socialmedia {
+        margin-top: 52px;
+      }
+    }
+
+    .sec2 {
+      @extend %sec;
+
+      .Links {
+        margin-top: 19px;
+
+        a {
+          color: white;
+        }
+      }
+
+      .rights-reserverd {
+      }
+    }
+  }
+}

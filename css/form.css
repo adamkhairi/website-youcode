@@ -1,0 +1,263 @@
+* {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+}
+body #container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+body .logo_nav {
+  position: relative;
+  right: 200px;
+  cursor: pointer;
+}
+
+body .nav_nav li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+body .nav_nav li a {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+body .button_nav {
+  background-color: black;
+  border-radius: 6px;
+  padding: 5px 15px;
+}
+
+body .button_nav a {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+body #container input {
+  visibility: hidden;
+}
+
+body #nav:checked + .nav-btn i:nth-child(1) {
+  transform: translateY(6px) rotate(180deg);
+}
+
+body #nav:checked + .nav-btn i:nth-child(3) {
+  transform: translateY(-6px) rotate(90deg);
+}
+
+body #nav:checked ~ .nav_nav {
+  z-index: 1;
+  opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+  body .nav_nav {
+    position: fixed;
+    top: 60px;
+    width: 80%;
+    height: 30%;
+    opacity: 0;
+    background-color: black;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 10px 10px 30px black;
+  }
+
+  body .nav_nav ul li a {
+    margin-left: 30px;
+    color: #fcfafa;
+    line-height: 35px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  body .nav_nav ul li a:hover {
+    color: #036aaf;
+    background-color: #3da6c6;
+    z-index: 1;
+    border-radius: 5px;
+  }
+
+  body .nav-btn {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+  }
+
+  body .nav-btn i {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #262626;
+    border-radius: 2px;
+    margin-left: 14px;
+  }
+
+  body .nav-btn i:nth-child(1),
+  body .nav-btn i:nth-child(2),
+  body .nav-btn i:nth-child(3) {
+    margin-top: 4px;
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  body #container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  body #container .logo_nav {
+    right: 100px;
+  }
+
+  body .button_nav {
+    visibility: hidden;
+  }
+}
+
+#contactUs {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  padding-top: 10px;
+  overflow: hidden;
+  max-width: 500px;
+  background-color: white;
+  border-radius: 2%;
+  box-shadow: 3px 3px 5px 6px rgb(110, 110, 110);
+  width: 400px;
+  height: 100%;
+  margin: 5% auto;
+}
+
+#contactUs h3 {
+  text-align: center;
+  font-size: 2em;
+}
+
+#contactUs_form {
+  display: flex;
+  flex-direction: column;
+}
+#contactUs_form input {
+  margin-top: 20px;
+  padding: 10px;
+}
+#contactUs_form input[type="submit"] {
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  width: 70%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    to right,
+    #5555a5,
+    #5165b2,
+    #3ea3c5,
+    #3da6c6
+  );
+  position: relative;
+  top: 15px;
+  font-size: 20px;
+  align-self: center;
+}
+
+textarea {
+  resize: none;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#error {
+  height: 30px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer {
+  background-image: url(../img/footer-image.png);
+  background-repeat: no-repeat;
+  background-size: 100% 1000px;
+  z-index: 10;
+}
+footer .sas {
+  background-color: rgba(63, 84, 156, 0.7);
+  background-size: 100%;
+  color: white;
+}
+footer .sas .div1 {
+  text-align: center;
+}
+footer .sas .div1 h1 {
+  font-size: 45px;
+}
+footer .sas .div1 h3 {
+  font-size: 26px;
+}
+footer .sas .div1 p {
+  font-size: 17px;
+}
+footer .sas .botonat {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+footer .sas .botonat .btn1 {
+  text-align: center;
+}
+footer .sas .botonat .btn1 button {
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 40px;
+  padding-left: 40px;
+  color: black;
+}
+footer .sas .botonat .btn2 {
+  text-align: center;
+}
+footer .sas .botonat .btn2 button {
+  background-color: #5cdce6;
+  border: none;
+  border-radius: 8px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 40px;
+  padding-left: 40px;
+  color: white;
+}
+footer .sas .sec2,
+footer .sas .sec1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+footer .sas .sec1 .visitez-ns {
+  margin-right: 109px;
+}
+footer .sas .sec1 .socialmedia {
+  margin-top: 52px;
+}
+footer .sas .sec2 .Links {
+  margin-top: 19px;
+}
+footer .sas .sec2 .Links a {
+  color: white;
+}

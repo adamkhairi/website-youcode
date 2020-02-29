@@ -1,0 +1,91 @@
+@mixin card {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-align: center;
+  // width: 400px;
+  color: white;
+  height: 840px;
+
+  button {
+    border: none;
+    color: white;
+    background-color: transparent;
+    grid-row: 2/3;
+
+    h1 {
+      text-align: center;
+      margin: 5px auto;
+      padding: 10px 40px;
+      background-color: #3d3d3f;
+      border-radius: 100px;
+      width: 100px;
+    }
+  }
+
+  h2 {
+    margin-top: 400px;
+  }
+}
+
+body {
+  .equipe {
+    background-color: #e8eaef;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: auto auto auto;
+
+    @media (max-width: 700px) {
+      display: block;
+      max-width: 100%;
+      margin: 20px auto;
+    }
+
+    .equipe_title {
+      grid-column: 2/6;
+      grid-row: 1/2;
+      text-align: center;
+      margin: 10px;
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
+
+    .mbr_1 {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      background: url(../img/1.jpg);
+      @include card();
+      width: 100%;
+    }
+
+    .mbr_2 {
+      grid-column: 3/4;
+      grid-row: 2/3;
+      background: url(../img/2.jpg);
+      @include card();
+      width: 100%;
+
+      button {
+        h1 {
+          background-color: #35c2cd;
+        }
+      }
+    }
+
+    .mbr_3 {
+      grid-column: 4/5;
+      grid-row: 2/3;
+      background: url(../img/3.jpg);
+      @include card();
+      width: 100%;
+    }
+
+    .mbr_4 {
+      grid-column: 5/6;
+      grid-row: 2/3;
+      background: url(../img/4.jpg);
+      @include card();
+      width: 100%;
+    }
+  }
+}
