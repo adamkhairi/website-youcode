@@ -1,6 +1,6 @@
 //******* */ function of form verification ***********
 
-var error, username, email, form, msg, phone;
+let error, username, email, form, msg, phone;
 username = document.getElementById('username');
 error = document.getElementById('error');
 form = document.getElementById('contactUs_form');
